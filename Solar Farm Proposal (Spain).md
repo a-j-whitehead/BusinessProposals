@@ -1,14 +1,14 @@
 # Proposal: Solar Farm (Spain)
 
 **Location:** Soria, Spain  
-**Capacity:** 5kWp Solar / 10kWh Battery / 40-Node Grid-Hybrid Cluster  
+**Capacity:** 10kWp Solar / 15kWh Battery / 40-Node Grid-Hybrid Cluster  
 **Date:** May 2026
 
 ## 1. Summary
 
-Solar Farm is a specialized high-density compute farm designed to arbitrage solar energy and repurposed hardware into high-yield decentralized cloud revenue. By operating as a grid-tied hybrid, the project captures 100% of available solar energy while maintaining 24/7 Tier-1 availability on the Akash Network.
+Solar Farm is a specialized high-density compute farm designed to arbitrage solar energy and repurposed hardware into high-yield decentralized cloud revenue. By operating as a grid-tied hybrid, the project captures available solar energy while maintaining 24/7 Tier-1 availability on the Akash Network.
 
-This proposal outlines the transition to a warehouse-based model in Soria, leveraging high-altitude cooling advantages and Spanish tax incentives for a predicted payback period of 16 months.
+This proposal outlines the transition to a warehouse-based model in Soria, leveraging high-altitude cooling advantages and Spanish tax incentives for a predicted payback period of 25 months.
 
 ## 2. Infrastructure & Location
 
@@ -21,13 +21,12 @@ This proposal outlines the transition to a warehouse-based model in Soria, lever
 
 | Item | Description | Cost |
 | --- | --- | ---: |
-| Solar Array (5kWp) | Ground/roof ballasted + hybrid inverter (post-grant) | €4,200 |
-| Battery Storage | 10kWh LFP (Lithium Iron Phosphate) stack | €3,900 |
+| Solar Array (10kWp) | Ground/roof ballasted + hybrid inverter (post-grant) | €8,400 |
+| Battery Storage | 15kWh LFP (Lithium Iron Phosphate) stack | €5,850 |
 | Compute Nodes | 32× salvaged + 4× refurbished i7 (8th Gen) | €1,000 |
-| Salvage Labor | Teardown, testing, reassembly (~60-120 hours) | €600 |
 | Infrastructure | DC-DC converters, 10G switches, NAS boot-server | €1,200 |
 | Legal / Permitting | Industrial grid-tie authorization (Autoconsumo) | €1,500 |
-| **Total CapEx** |  | **€11,900** |
+| **Total CapEx** |  | **€17,950** |
 
 ### 3.2 Operating Expenses (OpEx - Monthly)
 
@@ -39,13 +38,13 @@ This proposal outlines the transition to a warehouse-based model in Soria, lever
 | Connectivity | Business-grade static IP fiber | €60 |
 | **Total Monthly OpEx** |  | **€930** |
 
-### 3.3 Revenue & Profitability (CapEx Reduction Impact)
+### 3.3 Revenue & Profitability
 
 | Metric | Monthly | Annual |
 | --- | ---: | ---: |
 | Gross Revenue | €1,650 | €19,800 |
-| Net Profit | €1,020 | €12,240 |
-| ROI / Payback | **16 months** | — |
+| Net Profit | €720 | €8,640 |
+| ROI / Payback | **25 months** | — |
 
 ## 4. Technical Implementation
 
@@ -53,7 +52,7 @@ This proposal outlines the transition to a warehouse-based model in Soria, lever
 
 The cluster uses a state-aware load balancer programmed in Python/Go to optimize energy costs:
 
-- **09:00 - 18:00:** 100% solar powered. Surplus energy charges the 10kWh LFP battery.
+- **09:00 - 18:00:** Solar powered (10kWp array covering daytime baseline). Surplus energy charges the 15kWh LFP battery.
 - **18:00 - 22:00:** Battery discharge. Servers run on stored solar energy to avoid Spanish P1/P2 peak grid tariffs.
 - **22:00 - 08:00:** Grid switchover. Cluster draws from the grid during the super-off-peak Valle period (P6).
 
@@ -81,15 +80,15 @@ We target Akash Network Standard Instances. By maintaining 24/7 uptime through t
 
 ## 5. Risk Mitigation & Tax Strategy
 
-- **E-Waste Sourcing Risk:** Partnered with certified Spanish e-waste recyclers and industrial surplus auctions. 60-70% viability rate built into sourcing model. Initial batch testing (24-72 hour burn-in) identifies unreliable units before deployment.
+- **E-Waste Sourcing Risk:** Partnered with certified Spanish e-waste recyclers and industrial surplus auctions. 60-70% viability rate built into sourcing model. Initial batch testing (24-72 hour burn-in) identifies unreliable units before deployment to maintain QoS.
 - **Hardware Heterogeneity:** Tiered node architecture uses anchor (refurbished) nodes for critical services and salvaged nodes for batch/background workloads, reducing QoS variance.
 - **Thermal Consistency:** Using the grid-tie eliminates daily thermal cycling (on/off stress), extending node lifespan from about 2 years to roughly 4 years. Passive cooling + high-altitude airflow compensate for older hardware thermal signatures.
-- **Tax Optimization:** Under Royal Decree-Law 7/2026, the project qualifies for Freedom of Amortization. 100% of the €11,900 investment can be depreciated in Year 1, significantly offsetting corporate tax. E-waste sourcing costs are deductible as materials; labor can be expensed as consulting.
-- **Scalability:** The warehouse model supports modular 5kWp expansion. Each subsequent rack benefits from proven salvage sourcing channels and shared infrastructure, further lowering per-node CapEx.
+- **Tax Optimization:** Under Royal Decree-Law 7/2026, the project qualifies for Freedom of Amortization. 100% of the €17,950 investment can be depreciated in Year 1, significantly offsetting corporate tax. E-waste sourcing costs are deductible as materials; labor can be expensed as consulting.
+- **Scalability:** The warehouse model supports modular expansion. Each subsequent rack benefits from proven salvage sourcing channels and shared infrastructure, further lowering per-node CapEx.
 
 ## 6. Conclusion
 
-The Soria Hybrid model represents an economically optimized version of green compute. By combining salvaged e-waste hardware with a small cohort of refurbished anchor nodes, the project reduces CapEx. The hybrid architecture mitigates reliability risk through tiered workload allocation, while the grid-tie topology provides thermal and operational advantages regardless of node vintage.
+The Soria Hybrid model represents an economically realistic version of green compute. By combining salvaged e-waste hardware with a small cohort of refurbished anchor nodes, the project manages CapEx while investing in necessary QA. The hybrid architecture mitigates reliability risk through tiered workload allocation, while the grid-tie topology provides thermal and operational advantages regardless of node vintage.
 
 This model demonstrates that circular economy sourcing is compatible with cloud-grade QoS standards. The combination of e-waste arbitrage, high-altitude cooling, and Spanish energy subsidies creates a defensible margin against traditional cloud providers while advancing environmental sustainability.
 
@@ -100,4 +99,4 @@ There may be options to further reduce costs. I would like to explore setting up
 * https://www.wired.com/story/how-to-build-a-pc/
 * https://www.reddit.com/r/buildapc/comments/5edfki/building_junkyard_rigs_for_fun_and_profit_a/
 * https://drive.google.com/file/d/1MJKt9iSFPtYvTrQKjxbyUxyQv1jC7SWL/view
-
+* https://www.wired.com/story/how-to-build-a-pc/
