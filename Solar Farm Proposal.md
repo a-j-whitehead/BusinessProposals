@@ -97,7 +97,8 @@ This model demonstrates that circular economy sourcing is compatible with cloud-
 There may be options to further reduce costs. I would like to explore setting up some volunteer, or similar, groups to salvage compute on the basis that it is eco friendly. I think I have friends and family that may be interested.
 
 ## Resources
+* https://akash.network/pricing/provider-calculator/
+* https://www.wired.com/story/how-to-build-a-pc/
 * https://www.reddit.com/r/buildapc/comments/5edfki/building_junkyard_rigs_for_fun_and_profit_a/
 * https://drive.google.com/file/d/1MJKt9iSFPtYvTrQKjxbyUxyQv1jC7SWL/view
-* https://www.wired.com/story/how-to-build-a-pc/
 
