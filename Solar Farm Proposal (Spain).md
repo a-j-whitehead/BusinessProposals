@@ -1,4 +1,4 @@
-# Business Proposal: Solar Farm
+# Proposal: Solar Farm (Spain)
 
 **Location:** Soria, Spain  
 **Capacity:** 5kWp Solar / 10kWh Battery / 40-Node Grid-Hybrid Cluster  
