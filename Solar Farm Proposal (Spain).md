@@ -8,7 +8,7 @@
 
 Solar Farm is a specialized high-density compute farm designed to arbitrage solar energy and repurposed hardware into high-yield decentralized cloud revenue. By operating as a grid-tied hybrid, the project captures 100% of available solar energy while maintaining 24/7 Tier-1 availability on the Akash Network.
 
-This proposal outlines the transition to a warehouse-based model in Soria, leveraging high-altitude cooling advantages and Spanish tax incentives for a predicted payback period of 2.6 years.
+This proposal outlines the transition to a warehouse-based model in Soria, leveraging high-altitude cooling advantages and Spanish tax incentives for a predicted payback period of 16 months.
 
 ## 2. Infrastructure & Location
 
@@ -41,12 +41,11 @@ This proposal outlines the transition to a warehouse-based model in Soria, lever
 
 ### 3.3 Revenue & Profitability (CapEx Reduction Impact)
 
-| Metric | Monthly | Annual | Change vs. Original |
-| --- | ---: | ---: | ---: |
-| Gross Revenue | €1,650 | €19,800 | — |
-| Net Profit | €1,020 | €12,240 | +33% |
-| ROI / Payback | **16 months** | — | -27% faster |
-| CapEx Savings | — | — | **€5,300 (31%)** |
+| Metric | Monthly | Annual |
+| --- | ---: | ---: |
+| Gross Revenue | €1,650 | €19,800 |
+| Net Profit | €1,020 | €12,240 |
+| ROI / Payback | **16 months** | — |
 
 ## 4. Technical Implementation
 
